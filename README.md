@@ -26,3 +26,4 @@
 ![Image](https://github.com/user-attachments/assets/90b5beaa-c896-4245-a73a-73b86e02fd02)
 
 # practical 7
+![Image](https://github.com/user-attachments/assets/563abfe4-d353-4e7e-a902-d253853231c2)
