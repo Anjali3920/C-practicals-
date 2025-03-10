@@ -10,4 +10,7 @@
 [Image](https://github.com/user-attachments/assets/b42bc627-bd90-4d8e-9995-553dcb9d78df)
 
 # practical 4
+![Image](https://github.com/user-attachments/assets/83258d6c-aa48-420b-951b-3e44317be151)
+
+
 
