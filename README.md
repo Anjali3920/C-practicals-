@@ -7,3 +7,7 @@
 [Image](https://github.com/user-attachments/assets/42daf852-7154-4aeb-9a14-4b341e811a59)
 
 # practical 3
+[Image](https://github.com/user-attachments/assets/b42bc627-bd90-4d8e-9995-553dcb9d78df)
+
+# practical 4
+
