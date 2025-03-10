@@ -16,3 +16,6 @@
 ![Image](https://github.com/user-attachments/assets/4fef2173-dfbe-4913-a916-72fffdabd479)
 
 ![Image](https://github.com/user-attachments/assets/7acccc8f-2ddd-426b-bdee-6783428751b1)
+
+# practical 5
+![Image](https://github.com/user-attachments/assets/d4ef3150-3a13-40ec-acb2-8bfb3ff37550)
