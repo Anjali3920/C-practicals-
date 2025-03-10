@@ -35,3 +35,10 @@
 ![Image](https://github.com/user-attachments/assets/0f3de777-c39a-46b5-92db-4fe3647fc1fb)
 
 # practical 9
+![Image](https://github.com/user-attachments/assets/38809941-9e71-4033-ac3e-1aa708e02c20)
+
+![Image](https://github.com/user-attachments/assets/adcf7983-343a-4fbf-9dbe-94e4c7b8ddb1)
+
+![Image](https://github.com/user-attachments/assets/90f44601-fd3c-4cd8-998a-975d36cf6b4a)
+
+# practical 10
