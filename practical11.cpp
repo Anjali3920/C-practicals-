@@ -16,7 +16,7 @@ void checkCompatibility(int rows1, int cols1, int rows2, int cols2) {
 int main() { 
    try { 
       checkCompatibility(2, 6, 4, 2); 
-   } catch (MatrixException e) { 
+   } catch (MatrixException& e) { 
       cout << "Eггог: <<<< e.what() << endl; 
    } 
    return 0; 
