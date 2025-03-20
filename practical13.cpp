@@ -1,4 +1,5 @@
-#include <iostream using namespace std; 
+#include <iostream>
+using namespace std; 
 
 class Student { 
 public: 
@@ -28,7 +29,7 @@ int main() {
       students[i].input(); 
    } 
 cout<<"\nStudent Details: \n"; 
-for (int i=0; i < 5; 1++) { 
+for (int i=0; i < 5; i++) { 
 students[i].display(); 
 } 
 return 0; 
