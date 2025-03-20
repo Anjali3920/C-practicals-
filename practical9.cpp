@@ -16,7 +16,7 @@ public:
    } 
 }; 
 
-class Student public Person { 
+class Student: public Person { 
    string course; 
 
 public: 
@@ -31,7 +31,7 @@ public:
    } 
 }; 
 
-class Employee public Person { 
+class Employee: public Person { 
    int salary;  
 public: 
    void input() {
