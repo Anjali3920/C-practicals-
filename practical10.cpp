@@ -9,7 +9,7 @@ public:
    } 
 
    // Area with 3 sides (Heron's formula) 
-   double area(double a, double b, double c) { 
+   double area(int a, int b, int c) { 
       double s = (a + b + c) / 2; 
       return sqrt(s* (s-a)*(s-b)*(s-c)); 
    } 
