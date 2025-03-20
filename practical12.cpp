@@ -4,7 +4,7 @@ using namespace std;
 
 class PrimeException: public exception { 
 public: 
-   const char what() const throw() { 
+   const char* what() const throw() { 
        return "Number must be greater than 11"; 
    } 
 }; 
