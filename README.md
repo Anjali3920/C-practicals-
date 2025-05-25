@@ -1,6 +1,6 @@
 # C-practicals-
 
-## practical 14
+## practical 12
 // program 14 remove whitespace
 ```
 #include <iostream>
@@ -75,6 +75,56 @@ int main() {
 
     return 0;
 }
+```
+
+## prac 10
+```
+// program 10
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class Triangle {
+private:
+    double a, b, c;
+
+public:
+    Triangle(double x, double y, double z) {
+        if (x <= 0 || y <= 0 || z <= 0) {
+            cout << "Error: All sides must be greater than 0." << endl;
+            exit(1);
+        }
+        if (x + y <= z || x + z <= y || y + z <= x) {
+            cout << "Error: Sum of any two sides must be greater than the third side." << endl;
+            exit(1);
+        }
+        a = x;
+        b = y;
+        c = z;
+    }
+
+    double area() {
+        double s = (a + b + c) / 2;
+        return sqrt(s * (s - a) * (s - b) * (s - c));
+    }
+
+    double area(double base, double height) {
+        return 0.5 * base * height;
+    }
+};
+
+int main() {
+    Triangle t1(3, 4, 5);
+    cout << "Area using Heron's formula: " << t1.area() << endl;
+    cout << "Area of right-angled triangle (base=3, height=4): " << t1.area(3, 4) << endl;
+    return 0;
+}
+
+```
+
+## prac 9
+```
+
 ```
 # practical 1
 
