@@ -341,6 +341,47 @@ int main() {
 
 ## prac 5 merge two order array 
 ```
+#include <iostream>
+#include <vector>
+using namespace std;
+
+// Function to merge two sorted arrays
+vector<int> mergeArrays(vector<int> arr1, vector<int> arr2) {
+    vector<int> merged;
+    int i = 0, j = 0;
+
+    // Merge elements in sorted order
+    while (i < arr1.size() && j < arr2.size()) {
+        if (arr1[i] < arr2[j])
+            merged.push_back(arr1[i++]);
+        else
+            merged.push_back(arr2[j++]);
+    }
+
+    // Add remaining elements from arr1 (if any)
+    while (i < arr1.size())
+        merged.push_back(arr1[i++]);
+
+    // Add remaining elements from arr2 (if any)
+    while (j < arr2.size())
+        merged.push_back(arr2[j++]);
+
+    return merged;
+}
+
+int main() {
+    vector<int> arr1 = {1, 3, 5, 7};
+    vector<int> arr2 = {2, 4, 6, 8};
+
+    vector<int> merged = mergeArrays(arr1, arr2);
+
+    cout << "Merged sorted array: ";
+    for (int num : merged)
+        cout << num << " ";
+
+    cout << endl;
+    return 0;
+}
 
 ```
 ## prac 4 string manipulation
