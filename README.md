@@ -1,4 +1,36 @@
 # C-practicals-
+
+## practical 14
+// program 14 remove whitespace
+```
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+void removeWhitespace(string inputFile, string outputFile) {
+    ifstream in(inputFile);
+    ofstream out(outputFile);
+    if (!in || !out) {
+        cout << "Error opening files!" << endl;
+        return;
+    }
+    char ch;
+    while (in.get(ch)) {
+        if (!isspace(ch))
+            out.put(ch);
+    }
+    cout << "File copied successfully without whitespaces.\n";
+    in.close();
+    out.close();
+}
+
+int main() {
+    string inputFile = "input.txt";
+    string outputFile = "output.txt";
+    removeWhitespace(inputFile, outputFile);
+    return 0;
+}
+```
 # practical 1
 
 ![Image](https://github.com/user-attachments/assets/7f740462-eebb-4dc4-a8ac-f047eda0ac65)
