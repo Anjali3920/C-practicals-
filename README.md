@@ -31,6 +31,51 @@ int main() {
     return 0;
 }
 ```
+## prac 11 details of 5 students
+
+```
+#include <iostream>
+using namespace std;
+
+class Student {
+public:
+    int rollNo;
+    string name;
+    string className;
+    int year;
+    float totalMarks;
+
+    void input() {
+        cout << "Enter Roll No, Name, Class, Year, and Total Marks: ";
+        cin >> rollNo >> name >> className >> year >> totalMarks;
+    }
+
+    void display() {
+        cout << "Roll No: " << rollNo
+             << ", Name: " << name
+             << ", Class: " << className
+             << ", Year: " << year
+             << ", Total Marks: " << totalMarks << endl;
+    }
+};
+
+int main() {
+    Student students[5]; // array of 5 Student objects
+
+    // Taking input for 5 students
+    for (int i = 0; i < 5; i++) {
+        cout << "\nEnter details for Student " << (i + 1) << ":\n";
+        students[i].input();
+    }
+
+    cout << "\nStudent Details:\n";
+    for (int i = 0; i < 5; i++) {
+        students[i].display();
+    }
+
+    return 0;
+}
+```
 # practical 1
 
 ![Image](https://github.com/user-attachments/assets/7f740462-eebb-4dc4-a8ac-f047eda0ac65)
