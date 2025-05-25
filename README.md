@@ -1,7 +1,8 @@
 # C-practicals-
 
-## practical 12
-// program 14 remove whitespace
+```
+## practical 12  remove whitespace
+
 ```
 #include <iostream>
 #include <fstream>
@@ -77,7 +78,7 @@ int main() {
 }
 ```
 
-## prac 10
+## prac 10  triangle class
 ```
 // program 10
 #include <iostream>
@@ -122,10 +123,63 @@ int main() {
 
 ```
 
-## prac 9
+## prac 9 class pearson
+```
+#include <iostream>
+using namespace std;
+
+class Person {
+protected:
+    string name;
+public:
+    Person(string n) : name(n) {}
+    virtual void display() {
+        cout << "Name: " << name << endl;
+    }
+};
+
+class Student : public Person {
+    string course;
+    int marks, year;
+public:
+    Student(string n, string c, int m, int y) : Person(n), course(c), marks(m), year(y) {}
+    void display() override {
+        cout << "Name: " << name << "\nCourse: " << course << "\nMarks: " << marks << "\nYear: " << year << endl;
+    }
+};
+
+class Employee : public Person {
+    string department;
+    float salary;
+public:
+    Employee(string n, string d, float s) : Person(n), department(d), salary(s) {}
+    void display() override {
+        cout << "Name: " << name << "\nDepartment: " << department << "\nSalary: " << salary << endl;
+    }
+};
+
+int main() {
+    Person* p;
+    Student s("Aman", "BCA", 85, 2025);
+    Employee e("Riya", "HR", 50000);
+
+    p = &s; p->display();
+    cout << endl;
+    p = &e; p->display();
+
+    return 0;
+}
+```
+## practical 8 matrix class
 ```
 
 ```
+## practical 7 GCD calculation
+```
+
+```
+```
+## prac 8 
 # practical 1
 
 ![Image](https://github.com/user-attachments/assets/7f740462-eebb-4dc4-a8ac-f047eda0ac65)
