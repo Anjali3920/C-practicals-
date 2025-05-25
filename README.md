@@ -517,11 +517,63 @@ int main() {
 ```
 ## prac 2 remove duplicate from array
 ```
+#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+void removeDuplicates(vector<int>& arr) {
+    set<int> uniqueElements(arr.begin(), arr.end());
+    arr.assign(uniqueElements.begin(), uniqueElements.end());
+}
+
+int main() {
+    vector<int> arr = {1, 2, 2, 3, 4, 4, 5, 6, 6};
+    
+    cout << "Original array: ";
+    for (int num : arr) cout << num << " ";
+    cout << endl;
+    
+    removeDuplicates(arr);
+    
+    cout << "Array after removing duplicates: ";
+    for (int num : arr) cout << num << " ";
+    cout << endl;
+    
+    return 0;
+}
 
 ```
 ## prac 1 sum of terms
 ```
+#include <iostream>
+#include <cmath> // for pow()
+#include <cstdlib> // for atoi()
+using namespace std;
 
+int main(int argc, char* argv[]) {
+    int n;
+
+    if (argc > 1) {
+        n = atoi(argv[1]);
+    } else {
+        cout << "Enter the number of terms: ";
+        cin >> n;
+    }
+
+    double sum = 0.0;
+
+    for (int i = 1; i <= n; i++) {
+        double term = 1.0 / pow(i, i);
+        if (i % 2 == 0)
+            sum -= term;
+        else
+            sum += term;
+    }
+
+    cout << "Sum of the series: " << sum << endl;
+    return 0;
+}
 ```
 # practical 1 
 
