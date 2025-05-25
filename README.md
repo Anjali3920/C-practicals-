@@ -171,28 +171,112 @@ int main() {
 ```
 ## practical 8 matrix class
 ```
+#include <iostream>
+using namespace std;
 
+class Matrix {
+    int a[10][10], r, c;
+public:
+    Matrix(int x = 0, int y = 0) : r(x), c(y) {}
+
+    void input() {
+        for (int i = 0; i < r; i++)
+            for (int j = 0; j < c; j++)
+                cin >> a[i][j];
+    }
+
+    void display() {
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++)
+                cout << a[i][j] << " ";
+            cout << endl;
+        }
+    }
+
+    Matrix add(Matrix m) {
+        if (r != m.r || c != m.c)
+            throw "Incompatible for addition!";
+        Matrix res(r, c);
+        for (int i = 0; i < r; i++)
+            for (int j = 0; j < c; j++)
+                res.a[i][j] = a[i][j] + m.a[i][j];
+        return res;
+    }
+
+    Matrix multiply(Matrix m) {
+        if (c != m.r)
+            throw "Incompatible for multiplication!";
+        Matrix res(r, m.c);
+        for (int i = 0; i < r; i++)
+            for (int j = 0; j < m.c; j++)
+                for (int k = 0; k < c; k++)
+                    res.a[i][j] += a[i][k] * m.a[k][j];
+        return res;
+    }
+
+    Matrix transpose() {
+        Matrix res(c, r);
+        for (int i = 0; i < r; i++)
+            for (int j = 0; j < c; j++)
+                res.a[j][i] = a[i][j];
+        return res;
+    }
+};
+
+int main() {
+    int r1, c1, r2, c2, ch;
+    cout << "Enter size of Matrix 1: "; cin >> r1 >> c1;
+    cout << "Enter size of Matrix 2: "; cin >> r2 >> c2;
+    Matrix m1(r1, c1), m2(r2, c2);
+    cout << "Matrix 1:\n"; m1.input();
+    cout << "Matrix 2:\n"; m2.input();
+
+    do {
+        cout << "\n1.Add 2.Multiply 3.Transpose 4.Exit: ";
+        cin >> ch;
+        try {
+            if (ch == 1) m1.add(m2).display();
+            else if (ch == 2) m1.multiply(m2).display();
+            else if (ch == 3) m1.transpose().display();
+        } catch (const char* msg) {
+            cout << msg << endl;
+        }
+    } while (ch != 4);
+
+    return 0;
+}
 ```
 ## practical 7 GCD calculation
 ```
 
 ```
 
-## prac 6
+## prac 6 binary search
 ```
 
 ```
 
-## prac 5
+## prac 5 merge two order array 
 ```
 
 ```
-## prac 4
+## prac 4 string manipulation
 ```
 
 ```
+## prac 3 occurence of each alphabet
+```
 
-# practical 1
+```
+## prac 2 remove duplicate from array
+```
+
+```
+## prac 1 sum of terms
+```
+
+```
+# practical 1 
 
 ![Image](https://github.com/user-attachments/assets/7f740462-eebb-4dc4-a8ac-f047eda0ac65)
 
