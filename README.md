@@ -1,6 +1,5 @@
 # C-practicals-
 
-```
 ## practical 12  remove whitespace
 
 ```
@@ -178,8 +177,21 @@ int main() {
 ```
 
 ```
+
+## prac 6
 ```
-## prac 8 
+
+```
+
+## prac 5
+```
+
+```
+## prac 4
+```
+
+```
+
 # practical 1
 
 ![Image](https://github.com/user-attachments/assets/7f740462-eebb-4dc4-a8ac-f047eda0ac65)
