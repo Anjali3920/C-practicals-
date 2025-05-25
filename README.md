@@ -386,6 +386,98 @@ int main() {
 ```
 ## prac 4 string manipulation
 ```
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+// Display ASCII values of a string
+void displayASCII(string str) {
+    cout << "ASCII values:\n";
+    for (char c : str) {
+        cout << c << " -> " << int(c) << endl;
+    }
+}
+
+// Concatenate two C-style strings
+void concatenateStrings(char str1[], char str2[]) {
+    int i = strlen(str1), j = 0;
+    while (str2[j] != '\0') {
+        str1[i++] = str2[j++];
+    }
+    str1[i] = '\0';
+}
+
+// Compare two strings character by character
+bool compareStrings(char str1[], char str2[]) {
+    int i = 0;
+    while (str1[i] != '\0' && str2[i] != '\0') {
+        if (str1[i] != str2[i])
+            return false;
+        i++;
+    }
+    return str1[i] == str2[i];  // true if both end at same time
+}
+
+// Calculate length of a string manually
+int stringLength(char* str) {
+    int len = 0;
+    while (*str != '\0') {
+        len++;
+        str++;
+    }
+    return len;
+}
+
+// Convert string to uppercase
+void toUppercase(char str[]) {
+    int i = 0;
+    while (str[i] != '\0') {
+        if (str[i] >= 'a' && str[i] <= 'z') {
+            str[i] = str[i] - 32;
+        }
+        i++;
+    }
+}
+
+// Reverse the string
+void reverseString(char str[]) {
+    int len = stringLength(str);
+    for (int i = 0; i < len / 2; i++) {
+        swap(str[i], str[len - i - 1]);
+    }
+}
+
+int main() {
+    char str1[200], str2[100];
+
+    cout << "Enter first string: ";
+    cin >> str1;
+    cout << "Enter second string: ";
+    cin >> str2;
+
+    // Display ASCII values of first string
+    displayASCII(str1);
+
+    // Concatenate str2 to str1
+    concatenateStrings(str1, str2);
+    cout << "Concatenated String: " << str1 << endl;
+
+    // Compare strings
+    cout << "Strings are " << (compareStrings(str1, str2) ? "equal" : "not equal") << endl;
+
+    // Length of concatenated string
+    cout << "Length of concatenated string: " << stringLength(str1) << endl;
+
+    // Convert to uppercase
+    toUppercase(str1);
+    cout << "Uppercase String: " << str1 << endl;
+
+    // Reverse string
+    reverseString(str1);
+    cout << "Reversed String: " << str1 << endl;
+
+    return 0;
+}
 
 ```
 ## prac 3 occurence of each alphabet
